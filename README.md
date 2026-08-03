@@ -6,6 +6,10 @@ Researched and published by [CairnVault](https://cairnvault.app). Every claim be
 
 *This is a comparison of how products work. It is not legal advice.*
 
+> 📖 **Prefer to read it as a web page?** [cairnvault.github.io/digital-legacy-teardown](https://cairnvault.github.io/digital-legacy-teardown/)
+> · 🎬 **Prefer 4 minutes of video?** [What happens to your online accounts when you die](https://youtu.be/AHOkf6vYjrE)
+> · 📄 [Full source list](SOURCES.md) · 🔍 [Open verification questions](https://github.com/cairnvault/digital-legacy-teardown/issues) — help us close them
+
 ---
 
 ## The short version
@@ -256,6 +260,38 @@ Everything above was checked against the vendor's live documentation on **2 Augu
 **Claims we retracted from our own earlier materials** are marked in the text above: the password-manager "must be a paying subscriber" claim, the Facebook account-deletion claim, and Trustworthy's Series A size.
 
 *Vendor terms change. Re-verify before relying on any of this. Not legal advice.*
+
+---
+
+## Corrections
+
+This document is only worth anything if it is correct, so corrections are treated as the
+most valuable contribution anyone can make to it — including corrections that make us
+look worse.
+
+**How to send one.** [Open an issue](https://github.com/cairnvault/digital-legacy-teardown/issues/new)
+with the claim you are disputing and a link to the page that contradicts it. If you would
+rather not do it in public, use the contact form at
+[cairnvault.app/contact](https://cairnvault.app/contact). If you work for a vendor named
+here and think we have characterised your product wrongly, we will correct the text and
+record the correction below with the date — we will not quietly edit it.
+
+**Open verification questions.** Several claims in this category are widely repeated and,
+as far as we can tell, unsourced. We have filed each one as an issue rather than
+publishing it, and we would genuinely like help closing them:
+[open verification questions](https://github.com/cairnvault/digital-legacy-teardown/issues?q=is%3Aissue+is%3Aopen+label%3Averification).
+
+### Correction log
+
+| Date | What changed | Why |
+|---|---|---|
+| 2026-08-02 | Retracted: *"password-manager emergency access requires the survivor to already be a paying subscriber."* | False. Bitwarden's own documentation: *"Anyone with a free or premium Bitwarden account… can be designated as a trusted emergency contact."* Same at LastPass, Proton Pass and NordPass. This claim was in our own earlier marketing; it is now retracted everywhere. |
+| 2026-08-02 | Retracted: *"a Facebook legacy contact cannot delete the account."* | Meta's live help page lists requesting account removal as something a legacy contact can do. |
+| 2026-08-02 | Corrected: Trustworthy's Series A was **$15M** (April 2022, led by Valor Siren Ventures), not $19.7M. | $19.7M is cumulative funding. We had misread the press release. |
+| 2026-08-02 | Dropped: *"Trust & Will's digital vault is Everplans white-labeled."* | Neither company's site substantiates it, and we could find no primary source. |
+| 2026-08-02 | Softened: Everplans' encryption description, from *"admits server-side AES-256 with company-held keys"* to a description of what their security page actually says. | Their page is *silent* on zero-knowledge; it makes a policy promise with a stated staff-access carve-out. Overstating it would have been the same error we criticise others for. |
+| 2026-08-02 | Removed: Apple's *"3-year deletion"* policy and *"a court order is insufficient."* | Could not be confirmed from Apple's own documentation, and the second appears to be wrong. |
+| 2026-08-03 | Added this correction log, and filed the unresolved claims as public issues. | The list of what we could not verify was buried at the bottom of the document; it should be actionable. |
 
 ---
 

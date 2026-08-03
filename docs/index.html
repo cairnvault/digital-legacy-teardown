@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>What actually happens to your accounts when you die — a sourced teardown</title>
+<meta name="description" content="No password manager verifies death — all seven are silence timers. Apple’s Legacy Contact excludes your passwords. A sourced teardown, with a citation for every claim.">
+<link rel="canonical" href="https://cairnvault.github.io/digital-legacy-teardown/">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<meta name="author" content="CairnVault">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="CairnVault Research">
+<meta property="og:title" content="What actually happens to your accounts when you die — a sourced teardown">
+<meta property="og:description" content="No password manager verifies death — all seven are silence timers. Apple’s Legacy Contact excludes your passwords. A sourced teardown, with a citation for every claim.">
+<meta property="og:url" content="https://cairnvault.github.io/digital-legacy-teardown/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="What actually happens to your accounts when you die — a sourced teardown">
+<meta name="twitter:description" content="No password manager verifies death — all seven are silence timers. Apple’s Legacy Contact excludes your passwords. A sourced teardown, with a citation for every claim.">
+<style>:root{--ink:#1c1a19;--mute:#5d5753;--rule:#e2ddd8;--paper:#fbf9f7;--accent:#6b2434;--accentbg:#f6eeef}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font:17px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:44rem;margin:0 auto;padding:0 1.25rem 5rem}
+header.masthead{border-bottom:1px solid var(--rule);margin-bottom:2.5rem;padding:1.1rem 0}
+header.masthead .wrap{padding-bottom:0}
+.brand{font-weight:700;letter-spacing:.02em;color:var(--accent);text-decoration:none;font-size:1rem}
+.brand span{color:var(--mute);font-weight:400}
+nav.sub{font-size:.9rem;margin-top:.35rem}
+nav.sub a{color:var(--mute);margin-right:1rem}
+h1{font-size:2.05rem;line-height:1.2;letter-spacing:-.02em;margin:0 0 1rem}
+h2{font-size:1.4rem;line-height:1.25;margin:2.8rem 0 .9rem;padding-top:.4rem;border-top:1px solid var(--rule)}
+h3{font-size:1.12rem;margin:2rem 0 .6rem}
+h4{font-size:1rem;margin:1.4rem 0 .5rem}
+p,li{margin:0 0 1rem}
+ul,ol{padding-left:1.3rem}
+a{color:var(--accent)}
+a:hover{text-decoration:none}
+blockquote{margin:1.2rem 0;padding:.7rem 1.1rem;border-left:3px solid var(--accent);
+  background:var(--accentbg);color:#3d3532;border-radius:0 3px 3px 0}
+blockquote p:last-child{margin-bottom:0}
+hr{border:0;border-top:1px solid var(--rule);margin:2.5rem 0}
+code{background:#efeae5;padding:.1em .35em;border-radius:3px;font-size:.88em}
+.tablewrap{overflow-x:auto;margin:1.4rem 0;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:.92rem;min-width:30rem}
+th,td{border:1px solid var(--rule);padding:.5rem .65rem;text-align:left;vertical-align:top}
+th{background:#f2ede8;font-weight:600}
+.lede{font-size:1.12rem;color:var(--mute)}
+footer.foot{margin-top:3.5rem;padding-top:1.5rem;border-top:1px solid var(--rule);
+  font-size:.9rem;color:var(--mute)}
+footer.foot a{color:var(--accent)}
+.cta{display:block;margin:2.5rem 0;padding:1.1rem 1.25rem;background:#fff;
+  border:1px solid var(--rule);border-left:3px solid var(--accent);border-radius:0 4px 4px 0}
+.cta p:last-child{margin-bottom:0}
+.cta h2{border:0;margin:0 0 .5rem;padding:0;font-size:1.1rem}
+@media (max-width:600px){body{font-size:16px}h1{font-size:1.65rem}.wrap{padding:0 1rem 3.5rem}}</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"What actually happens to your accounts when you die","alternativeHeadline":"A sourced teardown of every digital-legacy service, password manager, and platform legacy-contact feature","description":"A primary-source comparison of digital-legacy services, password-manager emergency access, and platform legacy-contact features, on two axes: does the provider verify death, and can the provider read your data.","datePublished":"2026-08-03","dateModified":"2026-08-03","inLanguage":"en","isAccessibleForFree":true,"license":"https://creativecommons.org/licenses/by/4.0/","mainEntityOfPage":{"@type":"WebPage","@id":"https://cairnvault.github.io/digital-legacy-teardown/"},"author":{"@type":"Organization","name":"CairnVault","url":"https://cairnvault.app","description":"Encrypted digital-legacy planning: a plan your family can open when you die, that no one — including us — can read while you are alive."},"publisher":{"@type":"Organization","name":"CairnVault","url":"https://cairnvault.app","description":"Encrypted digital-legacy planning: a plan your family can open when you die, that no one — including us — can read while you are alive."},"citation":["https://support.apple.com/en-us/102631","https://bitwarden.com/help/emergency-access/","https://www.everplans.com/everplans-security","https://www.trustworthy.com/legacy-access-invitation","https://www.cipherwill.com/i/how-execution-timeline-works"],"about":[{"@type":"Thing","name":"Digital legacy"},{"@type":"Thing","name":"Estate planning"},{"@type":"Thing","name":"Password manager emergency access"},{"@type":"Thing","name":"End-to-end encryption"}]}</script>
+</head>
+<body>
+<header class="masthead"><div class="wrap">
+  <a class="brand" href="https://cairnvault.github.io/digital-legacy-teardown/">CairnVault <span>Research</span></a>
+  <nav class="sub"><a href="https://cairnvault.github.io/digital-legacy-teardown/">The teardown</a><a href="https://cairnvault.github.io/digital-legacy-teardown/sources.html">Sources</a><a href="https://github.com/cairnvault/digital-legacy-teardown">GitHub</a><a href="https://cairnvault.app">CairnVault</a></nav>
+</div></header>
+<div class="wrap">
+<article>
+<h1 id="what-actually-happens-to-your-accounts-when-you-die">What actually happens to your accounts when you die</h1>
+<p><strong>A sourced teardown of every digital-legacy service, password manager, and platform &quot;legacy contact&quot; feature — and the two questions none of them answer together.</strong></p>
+<p>Researched and published by <a href="https://cairnvault.app">CairnVault</a>. Every claim below was verified against the vendor&#39;s own live documentation on <strong>2 August 2026</strong>, with the URL and the exact wording recorded. Where we could not verify something, we say so and leave the claim out. Corrections are welcome — see <a href="#corrections">Corrections</a>.</p>
+<p><em>This is a comparison of how products work. It is not legal advice.</em></p>
+<blockquote>
+<p>📖 <strong>Prefer to read it as a web page?</strong> <a href="https://cairnvault.github.io/digital-legacy-teardown/">cairnvault.github.io/digital-legacy-teardown</a>
+· 🎬 <strong>Prefer 4 minutes of video?</strong> <a href="https://youtu.be/AHOkf6vYjrE" target="_blank" rel="noopener">What happens to your online accounts when you die</a>
+· 📄 <a href="SOURCES.md">Full source list</a> · 🔍 <a href="https://github.com/cairnvault/digital-legacy-teardown/issues" target="_blank" rel="noopener">Open verification questions</a> — help us close them</p>
+</blockquote>
+<hr>
+<h2 id="the-short-version">The short version</h2>
+<p>There are exactly two hard questions in this category:</p>
+<ol>
+<li><strong>Does the provider actually verify that you died</strong> — or does it just measure whether you stopped logging in, or take a stranger&#39;s word for it?</li>
+<li><strong>Can the provider read your data?</strong> If a staff member can grant someone access to your vault, then the staff can read your vault.</li>
+</ol>
+<p>Almost every product answers one of these well. We could not find one that answers both.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th></th>
+<th><strong>Provider CAN read your data</strong></th>
+<th><strong>Provider CANNOT read your data</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Death NOT verified</strong></td>
+<td>Everplans, GoodTrust, Apple, Google, Meta, every password manager</td>
+<td>CipherWill, AbsentKey, Passdown, IronClad Family</td>
+</tr>
+<tr>
+<td><strong>Death IS verified</strong></td>
+<td>Trustworthy</td>
+<td><em>(empty — see the disclosure at the end)</em></td>
+</tr>
+</tbody>
+</table></div>
+<p>The bottom-right cell is the interesting one, and the reason it is empty is structural, not accidental: the moment you let an employee review a death certificate and click &quot;grant access,&quot; you have given up on the provider being unable to read the data. Doing both at once requires splitting the key so that the company&#39;s half is useless alone, and running the review process on the <em>authorisation</em> rather than on the data.</p>
+<hr>
+<h2 id="1-the-platforms-you-already-use">1. The platforms you already use</h2>
+<h3 id="apple-legacy-contact">Apple — Legacy Contact</h3>
+<p>Apple&#39;s Digital Legacy programme is the best of the big-platform options, and it still has a hole precisely where families need it most.</p>
+<p>From Apple&#39;s own support page, <a href="https://support.apple.com/en-us/102631" target="_blank" rel="noopener"><em>How to add a Legacy Contact for your Apple Account</em></a> (accessed 2 August 2026), verbatim:</p>
+<blockquote>
+<p>&quot;Your Legacy Contact can&#39;t access certain information. Inaccessible data includes movies, music, books, or subscriptions you purchased with your Apple Account, and <strong>data stored in your iCloud Keychain (payment information, passwords, and passkeys)</strong>.&quot;</p>
+</blockquote>
+<p>Read that again. The one category of data that would actually let a family settle an estate — <strong>the passwords</strong> — is the specific category Apple excludes. Your photos, messages, notes and device backups can pass to your legacy contact. The keys to everything else cannot.</p>
+<p>And to use it at all, your contact needs two things, per the same page:</p>
+<blockquote>
+<p>&quot;To file an access request after you pass away, they need: The access key that you generate when you choose them as your Legacy Contact — Your death certificate&quot;</p>
+</blockquote>
+<p>The access key is a string Apple generates when you set this up. If you never set it up, or your family cannot find the key, this route is closed. Apple does operate a separate legal-request process for that situation, but it is a different, slower path with no guarantee.</p>
+<p><strong>Verdict: real death verification (a certificate is genuinely required), no passwords.</strong></p>
+<h3 id="google-inactive-account-manager">Google — Inactive Account Manager</h3>
+<p>Google&#39;s tool notifies people you designate after you stop using your account. It performs <strong>no death verification whatsoever</strong> — it is a silence timer. You choose an inactivity period (Google&#39;s documented options run from 3 months to 18 months*), and up to <strong>10</strong> trusted contacts can be notified when it elapses.</p>
+<p>That is a genuine gap, in both directions: a long hospital stay, a sabbatical, or simply switching to a different email can fire it early; and if your family does not know it exists, it may fire into nobody&#39;s inbox.</p>
+<p>Google separately operates a request process for the accounts of deceased users, but it is discretionary and explicitly does not promise access.</p>
+<p><strong>Verdict: no death verification, and most people who have it do not know they have it.</strong></p>
+<blockquote>
+<p>* The 3-to-18-month range is corroborated across multiple independent secondary sources but we could not confirm it with a verbatim quote from Google&#39;s own page, so treat the exact endpoints as approximate. The part that matters — that the trigger is inactivity and nothing else — is confirmed.</p>
+</blockquote>
+<h3 id="meta-facebook-legacy-contact">Meta / Facebook — Legacy Contact</h3>
+<p>A legacy contact can manage a memorialised profile: write a pinned post, update the profile picture, respond to friend requests, and — per Meta&#39;s own help documentation — <strong>request the removal of the account</strong>.</p>
+<p>What they cannot do is <strong>log in as you or read your private messages</strong>. Meta is explicit about that, and it is the correct privacy decision. It is also, from an estate-settlement point of view, close to useless: memorialisation is a grief feature, not an inheritance feature.</p>
+<p><strong>Verdict: no death verification for the feature itself, and it was never designed to transfer anything.</strong></p>
+<blockquote>
+<p><strong>A correction we are making to our own earlier draft:</strong> we had previously written that a Facebook legacy contact cannot delete the account. Meta&#39;s live help page lists requesting account removal as something a legacy contact <em>can</em> do. We were wrong; this version is corrected.</p>
+</blockquote>
+<h3 id="microsoft-the-strictest-of-all">Microsoft — the strictest of all</h3>
+<p>Microsoft&#39;s current published position on access to a deceased person&#39;s account requires a <strong>subpoena or court order</strong>, and even then success is not guaranteed. Two narrow exceptions exist for documentation-only requests in Germany and China.</p>
+<p>There is no self-service legacy-contact feature. Older references to a &quot;Next of Kin&quot; process date from Microsoft&#39;s Hotmail era and do not appear in the current documentation.</p>
+<p><strong>Verdict: the most restrictive major platform. Plan around it, not through it.</strong></p>
+<hr>
+<h2 id="2-password-managers-the-dead-end-almost-everyone-assumes-will-save-them">2. Password managers: the dead end almost everyone assumes will save them</h2>
+<p>This is the section where our own research changed our minds, so we are going to be precise about it.</p>
+<p>The widely repeated claim — including in an earlier draft of our own materials — is that password-manager emergency access <em>requires the survivor to already be a paying subscriber</em>. <strong>That is not true, and we are retracting it.</strong> We checked all seven vendors&#39; documentation and the &quot;paying&quot; half is wrong almost everywhere.</p>
+<p>What is actually true is both narrower and, in our view, more damning.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Vendor</th>
+<th>Emergency access exists?</th>
+<th>What the <em>survivor</em> needs</th>
+<th>Delay</th>
+<th>Death verification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Bitwarden</strong></td>
+<td>Yes</td>
+<td>A Bitwarden account — <strong>free is explicitly fine</strong></td>
+<td>Grantor-set, minimum 1 day</td>
+<td><strong>None</strong></td>
+</tr>
+<tr>
+<td><strong>LastPass</strong></td>
+<td>Yes</td>
+<td>Any LastPass account, need not be Premium</td>
+<td>Grantor-set</td>
+<td><strong>None</strong></td>
+</tr>
+<tr>
+<td><strong>Proton Pass</strong></td>
+<td>Yes (shipped ~Aug 2025)</td>
+<td>A Proton account — free is fine</td>
+<td>Grantor-set</td>
+<td><strong>None</strong></td>
+</tr>
+<tr>
+<td><strong>NordPass</strong></td>
+<td>Yes</td>
+<td>Free users can be recipients*</td>
+<td>Grantor-set</td>
+<td><strong>None</strong></td>
+</tr>
+<tr>
+<td><strong>Keeper</strong></td>
+<td>Yes</td>
+<td>Unresolved from primary docs — we will not guess</td>
+<td>Grantor-set</td>
+<td><strong>None</strong></td>
+</tr>
+<tr>
+<td><strong>1Password</strong></td>
+<td><strong>No such feature at all</strong></td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Dashlane</strong></td>
+<td>Discontinued</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p>* NordPass&#39;s support article blocks automated fetching; the &quot;free users can be recipients&quot; line is taken from NordPass&#39;s own blog and support-page snippets rather than a full page we retrieved ourselves. Keeper&#39;s recipient requirement we simply could not resolve from primary documentation, and we are not going to guess.</p>
+</blockquote>
+<p>Bitwarden&#39;s documentation is admirably clear on the point (<a href="https://bitwarden.com/help/emergency-access/" target="_blank" rel="noopener">Emergency Access</a>):</p>
+<blockquote>
+<p>&quot;Anyone with a free or premium Bitwarden account on the same Bitwarden server can be designated as a trusted emergency contact.&quot;</p>
+</blockquote>
+<p>So the honest version of the criticism is this:</p>
+<p><strong>1. Every single one of them is a silence timer.</strong> Not one of the seven performs any death or incapacity verification. The mechanism is universally: your contact requests access → you have a window to refuse → if you do not respond, access opens. That is a design that cannot distinguish a funeral from a two-week holiday with no signal. If you are in an ICU, unconscious, your emergency contact can request your vault and the clock will run out on you.</p>
+<p><strong>2. The survivor still has to set up an account with your vendor, correctly, while grieving.</strong> Free, yes. But a bereaved 68-year-old has to discover which password manager their spouse used, create an account on it, and complete a request flow. That is a real barrier at the worst possible moment, even at $0.</p>
+<p><strong>3. What is released is a raw vault dump.</strong> Several hundred credentials in a list, with no indication of which three actually matter, which subscriptions are still charging the estate, or what to do first. It is data, not instructions.</p>
+<p><strong>4. 1Password — the market leader by reputation — has no mechanism at all.</strong> Its &quot;Emergency Kit&quot; is a self-recovery PDF, and 1Password&#39;s own guidance is:</p>
+<blockquote>
+<p>&quot;It&#39;s important that you don&#39;t share your Emergency Kit with anyone.&quot;</p>
+</blockquote>
+<p>The intended workaround is to print it and put it in a safe. That is not a product feature; that is a piece of paper. (1Password&#39;s Families &quot;account recovery&quot; does not fill the gap either — it resets the password of a <em>living</em> member who then completes the reset themselves. A dead person cannot complete that step.)</p>
+<p><strong>5. Dashlane&#39;s automated emergency-contact feature was discontinued.</strong> What remains is a manual encrypted export or live sharing between two people who are both present.</p>
+<hr>
+<h2 id="3-the-dedicated-digital-legacy-services">3. The dedicated digital-legacy services</h2>
+<h3 id="everplans-9999year">Everplans — $99.99/year</h3>
+<p>The closest structural analogue to a legacy vault, and the honour system is right at the centre of it.</p>
+<p>A designated &quot;Deputy&quot; reports that you have died. Everplans then emails <em>you</em> and waits. From Everplans&#39; own blog (<a href="https://www.everplans.com/blog/keep-things-private-until-after-youre-gone" target="_blank" rel="noopener">Keep Things Private Until After You&#39;re Gone</a>):</p>
+<blockquote>
+<p>&quot;After reporting your death, the Deputy must wait while Everplans attempts to contact you via email with the opportunity to block the unlocking.&quot;</p>
+</blockquote>
+<blockquote>
+<p>&quot;You can choose a wait time for your unlockers of up to 30 days.&quot;</p>
+</blockquote>
+<p>(Everplans has also been quoted describing the floor of that range as <strong>as short as three hours</strong>; we found that figure reproduced by a third party quoting Everplans rather than on a page we could fetch ourselves, so treat the exact floor as second-hand.)</p>
+<p><strong>We could find no mention of a death certificate anywhere in the release process Everplans documents.</strong> If nobody clicks the &quot;I&#39;m not dead&quot; link in the email, the vault opens.</p>
+<p>On encryption, we want to be scrupulous, because we had this wrong too. Everplans&#39; <a href="https://www.everplans.com/everplans-security" target="_blank" rel="noopener">security page</a> says:</p>
+<blockquote>
+<p>&quot;all your data is encrypted with a combination of public/private key encryption and AES256 encryption, with uniquely generated keys for each user and Everplan.&quot;</p>
+</blockquote>
+<blockquote>
+<p>&quot;Everplans administrators can never see the plan information that you fill out or any documents that you upload.&quot;</p>
+</blockquote>
+<blockquote>
+<p>&quot;Our strict internal procedures prevent any Everplan employee or administrator from gaining access to your account, beyond a limited set of data necessary to help grant you access to your account.&quot;</p>
+</blockquote>
+<p>The page never uses the words &quot;zero-knowledge,&quot; &quot;end-to-end,&quot; or &quot;client-side.&quot; So it neither claims nor disclaims the architecture. What it describes is a <strong>policy</strong> promise — strict internal procedures — carrying its own stated carve-out, rather than a mathematical one. That distinction matters: a policy can be changed, subpoenaed, or breached. It is not the same as a company that never receives the key.</p>
+<p><em>Ownership, for context:</em> Everplans was acquired by National Guardian Life Insurance in January 2021 and by Precoa, a pre-need funeral marketing company, in October 2024 — both confirmed on Everplans&#39; own site. It now operates as a wholly-owned subsidiary of a funeral-industry parent.</p>
+<h3 id="goodtrust-149-first-year-then-39year">GoodTrust — $149 first year, then $39/year</h3>
+<p>A dead man&#39;s switch, described plainly in <a href="https://support.mygoodtrust.com/support/solutions/articles/66000503696-what-is-the-dead-man-switch-and-how-does-it-work-" target="_blank" rel="noopener">GoodTrust&#39;s own support article</a>:</p>
+<blockquote>
+<p>&quot;select how often you would like us to check-in, 1-4 times a month/year&quot;</p>
+</blockquote>
+<blockquote>
+<p>&quot;if you don&#39;t reply after 3 times, the dead man&#39;s switch will be activated&quot;</p>
+</blockquote>
+<p>Miss three check-ins and your contacts get your documents, devices, accounts and directives. There is no certificate and no human review.</p>
+<p>Their <a href="https://mygoodtrust.com/security" target="_blank" rel="noopener">security page</a> describes SSL in transit, AES-256 at rest in &quot;our secure databases,&quot; 2FA and SOC 2. It contains <strong>zero occurrences</strong> of &quot;zero-knowledge,&quot; &quot;end-to-end encryption,&quot; &quot;client-side encryption,&quot; or any statement that GoodTrust cannot access your data. This is a conventional server-side architecture: GoodTrust holds the keys.</p>
+<h3 id="trustworthy-0-to-40month">Trustworthy — $0 to $40/month</h3>
+<p>Trustworthy is the most interesting case in the whole category, because it is the one company that genuinely does verify death — and that is exactly what creates its problem.</p>
+<p>Per <a href="https://www.trustworthy.com/legacy-access-invitation" target="_blank" rel="noopener">Trustworthy&#39;s legacy-access page</a>, the survivor submits a request, provides a government ID, uploads a death certificate, and &quot;Trustworthy&#39;s team will review and validate the documents.&quot; Once approved, access is granted.</p>
+<p>That is a real, human-reviewed process, and it is better than every timer above. But look at what it implies: <strong>if Trustworthy&#39;s staff can grant a stranger access to your vault, Trustworthy can access your vault.</strong> Access granted by a company is access the company has.</p>
+<p>Their marketing does make a strong-sounding confidentiality claim (<a href="https://www.trustworthy.com/faq" target="_blank" rel="noopener">FAQ</a>):</p>
+<blockquote>
+<p>&quot;Trustworthy uses &#39;aliasing,&#39; a method that scrambles data to make it unreadable. These aliases are irreversible and cannot be solved — not even by the Trustworthy team.&quot;</p>
+</blockquote>
+<p>Read carefully, that claim is <strong>scoped to specific tokenised fields</strong> — passwords, account numbers, Social Security numbers, notes. It is not a claim about your uploaded documents. And your uploaded documents are precisely what their AI features operate on. From <a href="https://www.trustworthy.com/blog/revolutionary-ai-features" target="_blank" rel="noopener">their own product blog</a>, &quot;Autopilot&quot;:</p>
+<blockquote>
+<p>&quot;analyzes hundreds of document types, powered by AI... automatically extracts key metadata, and generates concise natural language summaries.&quot;</p>
+</blockquote>
+<p>Their FAQ also confirms documents are &quot;automatically captured from your Gmail and organized in your Trustworthy account.&quot;</p>
+<p><strong>An AI cannot summarise a document it cannot read.</strong> These two claims live on different pages and are never reconciled. We are not alleging bad faith — the tokenised-field claim is probably accurate as written. We are pointing out that the scope of &quot;not even we can read it&quot; is much narrower than a customer skimming the homepage would assume.</p>
+<p><em>(For the record: Trustworthy&#39;s Series A was <strong>$15M</strong>, led by Valor Siren Ventures in April 2022, bringing total funding to $19.7M. We had previously written &quot;$19.7M Series A&quot; — that was a misreading of the press release and we have corrected it.)</em></p>
+<h3 id="cipherwill-free-tier-or-40year">CipherWill — free tier, or $40/year</h3>
+<p>An independent product with a genuine client-side encryption architecture — philosophically the closest thing to us in the category, and the one we most wanted to be fair to.</p>
+<p>Its release trigger is an inactivity countdown, and CipherWill documents it precisely (<a href="https://www.cipherwill.com/i/how-execution-timeline-works" target="_blank" rel="noopener">how the execution timeline works</a>):</p>
+<ul>
+<li><strong>Day 3</strong> of silence — activity check</li>
+<li><strong>Day 30</strong> — urgent attention</li>
+<li><strong>Day 90</strong> — last call</li>
+<li><strong>Day 100</strong> — <strong>key release to beneficiaries</strong></li>
+<li><strong>Day 200</strong> — zero-data purge</li>
+</ul>
+<p>Any activity resets the clock. Which means the question that decides whether your data is released is not &quot;did this person die&quot; but &quot;did this person log in within 100 days.&quot; A hospitalisation, a lost phone, a lost 2FA device, or a long trip is indistinguishable from death.</p>
+<p>On the cryptography, their homepage carries this trust line verbatim:</p>
+<blockquote>
+<p>&quot;Your data is secured with: 256-bit AES Encryption • Zero Knowledge Proofs • Elliptic Curve Cryptography (BLS12-381 &amp; SECP256K1 Curves) • One Time Pad Encryption • Lattice based Encryption (CRYSTALS-KYBER).&quot;</p>
+</blockquote>
+<p>Claiming AES <em>and</em> zero-knowledge proofs <em>and</em> elliptic-curve <em>and</em> one-time-pad <em>and</em> lattice-based post-quantum encryption simultaneously is unusual, and no technical paper substantiating the combination appears to exist. Their client code is open source — genuinely commendable — but the <strong>server</strong>, which is the component that decides when to release your data, is not.</p>
+<hr>
+<h2 id="4-so-what-would-actually-solve-this">4. So what would actually solve this?</h2>
+<p>Not a product pitch — a specification. If you are evaluating anything in this category, including us, these are the questions worth asking:</p>
+<ol>
+<li><strong>What exactly triggers release?</strong> If the answer contains the word &quot;inactivity,&quot; a coma triggers it and a lost password prevents it.</li>
+<li><strong>Who reviews the death claim, and can that reviewer also open the vault?</strong> If the same party does both, the encryption is a policy, not a mechanism.</li>
+<li><strong>What does my survivor need in advance?</strong> An account? An app? A subscription? Every requirement is a failure point at the exact moment your family is least capable of clearing it.</li>
+<li><strong>What do they receive?</strong> A credential dump, or a sequenced set of instructions?</li>
+<li><strong>What happens if the company dies before I do?</strong> Ask specifically, and get the answer in writing. This category has a long history of shutdowns — the site that once catalogued digital-legacy services, The Digital Beyond, lists a graveyard of them, and closures have continued: Cake&#39;s consumer site now redirects to a funeral-services network rather than operating independently. A vault whose company folds is a vault nobody can open.</li>
+<li><strong>Can I get my data out, and can my family, without the company&#39;s cooperation?</strong></li>
+</ol>
+<hr>
+<h2 id="5-disclosure-who-wrote-this-and-what-we-built">5. Disclosure: who wrote this, and what we built</h2>
+<p>This research was done by <strong><a href="https://cairnvault.app">CairnVault</a></strong>, and we are not a neutral party — we built a product in this category, so read accordingly. That is exactly why every claim above links to the vendor&#39;s own words rather than to our characterisation of them. Check them.</p>
+<p>What we built, stated plainly so you can hold it to the same standard:</p>
+<ul>
+<li>Your vault key is derived <strong>on your device</strong> from your master password plus a Secret Key generated on your device, using <strong>Argon2id</strong>. It never reaches us.</li>
+<li>Every field is encrypted with <strong>XChaCha20-Poly1305</strong> before it leaves your browser.</li>
+<li>When you seal the plan, the vault key is <strong>split in two</strong>. Your contacts hold one half, encrypted to keys they generated themselves; we hold the other. <strong>Neither half alone reveals anything.</strong></li>
+<li>Both halves are wrapped with a hybrid of <strong>X25519 and ML-KEM-768</strong> (NIST FIPS 203), so a future quantum computer cannot retroactively open a vault sealed today.</li>
+<li>Release requires a <strong>death certificate reviewed by a human</strong>, followed by a <strong>48-hour cooling-off window</strong> in which a living planner can cancel a mistaken or fraudulent claim.</li>
+<li>Your survivor needs <strong>no CairnVault account and no subscription</strong> — their key file works on its own.</li>
+<li>What they receive is a <strong>sequenced walkthrough</strong> of your plan, printable: who to notify, then which accounts, then which subscriptions are still charging.</li>
+<li><strong>$79 one-time</strong> to build and seal a plan. <strong>$29/year optional</strong> maintenance. Building a plan and naming contacts is free; you pay at seal.</li>
+</ul>
+<p>And the things we are not going to pretend about:</p>
+<ul>
+<li><strong>We have not had an external third-party security audit.</strong> For a product making cryptographic claims, that is table stakes and we have not done it yet. It is the first thing we would spend money on.</li>
+<li><strong>Our death verification is a trained human reviewing a certificate</strong>, not an integration with a government death registry. That is stronger than a timer and weaker than an automated registry check.</li>
+<li><strong>One nuance in the zero-knowledge claim:</strong> because we relay the invitation email, our mail path transiently handles a one-time secret used to hand a contact their key. It is documented not to be logged, but a maliciously modified backend could in principle capture it at that moment. So the precise claim is not &quot;mathematically impossible under all conditions&quot; — it is &quot;we hold one half of a split key, and never your password or Secret Key.&quot;</li>
+<li><strong>The empty quadrant is our own assessment</strong>, made on 2 August 2026 after searching specifically for anyone who occupies it. The nearest miss we found was IronClad Family, which makes strong zero-knowledge claims but whose own support documentation says &quot;Support cannot release documents manually, even with paperwork&quot; — implying an automated trigger rather than certificate review. If you know of a product that genuinely does both, tell us and we will update this table.</li>
+</ul>
+<hr>
+<h2 id="method-and-what-we-could-not-verify">Method, and what we could not verify</h2>
+<p>Everything above was checked against the vendor&#39;s live documentation on <strong>2 August 2026</strong>. Some pages block automated fetching; where that happened we have said so rather than filling the gap from memory.</p>
+<p><strong>Claims we deliberately left out because we could not verify them from a primary source:</strong></p>
+<ul>
+<li>That Apple permanently deletes a deceased person&#39;s account three years after legacy access is granted. Widely repeated; we could not confirm it on Apple&#39;s own documentation, so it does not appear above.</li>
+<li>That a death certificate plus a court order alone are insufficient for Apple without an access key. The evidence we found points the other way — Apple appears to operate a separate legal-request route.</li>
+<li>That Trust &amp; Will&#39;s digital vault is Everplans white-labeled. Neither company&#39;s site substantiates it. Dropped.</li>
+<li>Any verbatim quotation from CipherWill&#39;s FAQ on death verification — that page renders via JavaScript and we could not retrieve it.</li>
+<li>A precise current funding total for GoodTrust; published sources conflict.</li>
+</ul>
+<p><strong>Claims we retracted from our own earlier materials</strong> are marked in the text above: the password-manager &quot;must be a paying subscriber&quot; claim, the Facebook account-deletion claim, and Trustworthy&#39;s Series A size.</p>
+<p><em>Vendor terms change. Re-verify before relying on any of this. Not legal advice.</em></p>
+<hr>
+<h2 id="corrections">Corrections</h2>
+<p>This document is only worth anything if it is correct, so corrections are treated as the
+most valuable contribution anyone can make to it — including corrections that make us
+look worse.</p>
+<p><strong>How to send one.</strong> <a href="https://github.com/cairnvault/digital-legacy-teardown/issues/new" target="_blank" rel="noopener">Open an issue</a>
+with the claim you are disputing and a link to the page that contradicts it. If you would
+rather not do it in public, use the contact form at
+<a href="https://cairnvault.app/contact">cairnvault.app/contact</a>. If you work for a vendor named
+here and think we have characterised your product wrongly, we will correct the text and
+record the correction below with the date — we will not quietly edit it.</p>
+<p><strong>Open verification questions.</strong> Several claims in this category are widely repeated and,
+as far as we can tell, unsourced. We have filed each one as an issue rather than
+publishing it, and we would genuinely like help closing them:
+<a href="https://github.com/cairnvault/digital-legacy-teardown/issues?q=is%3Aissue+is%3Aopen+label%3Averification" target="_blank" rel="noopener">open verification questions</a>.</p>
+<h3 id="correction-log">Correction log</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Date</th>
+<th>What changed</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026-08-02</td>
+<td>Retracted: <em>&quot;password-manager emergency access requires the survivor to already be a paying subscriber.&quot;</em></td>
+<td>False. Bitwarden&#39;s own documentation: <em>&quot;Anyone with a free or premium Bitwarden account… can be designated as a trusted emergency contact.&quot;</em> Same at LastPass, Proton Pass and NordPass. This claim was in our own earlier marketing; it is now retracted everywhere.</td>
+</tr>
+<tr>
+<td>2026-08-02</td>
+<td>Retracted: <em>&quot;a Facebook legacy contact cannot delete the account.&quot;</em></td>
+<td>Meta&#39;s live help page lists requesting account removal as something a legacy contact can do.</td>
+</tr>
+<tr>
+<td>2026-08-02</td>
+<td>Corrected: Trustworthy&#39;s Series A was <strong>$15M</strong> (April 2022, led by Valor Siren Ventures), not $19.7M.</td>
+<td>$19.7M is cumulative funding. We had misread the press release.</td>
+</tr>
+<tr>
+<td>2026-08-02</td>
+<td>Dropped: <em>&quot;Trust &amp; Will&#39;s digital vault is Everplans white-labeled.&quot;</em></td>
+<td>Neither company&#39;s site substantiates it, and we could find no primary source.</td>
+</tr>
+<tr>
+<td>2026-08-02</td>
+<td>Softened: Everplans&#39; encryption description, from <em>&quot;admits server-side AES-256 with company-held keys&quot;</em> to a description of what their security page actually says.</td>
+<td>Their page is <em>silent</em> on zero-knowledge; it makes a policy promise with a stated staff-access carve-out. Overstating it would have been the same error we criticise others for.</td>
+</tr>
+<tr>
+<td>2026-08-02</td>
+<td>Removed: Apple&#39;s <em>&quot;3-year deletion&quot;</em> policy and <em>&quot;a court order is insufficient.&quot;</em></td>
+<td>Could not be confirmed from Apple&#39;s own documentation, and the second appears to be wrong.</td>
+</tr>
+<tr>
+<td>2026-08-03</td>
+<td>Added this correction log, and filed the unresolved claims as public issues.</td>
+<td>The list of what we could not verify was buried at the bottom of the document; it should be actionable.</td>
+</tr>
+</tbody>
+</table></div>
+<hr>
+<p><em>Published by CairnVault — <a href="https://cairnvault.app">cairnvault.app</a>. Corrections and additions are welcome: open an issue on this repository, or use the contact form at <a href="https://cairnvault.app/contact">cairnvault.app/contact</a>. If you are a vendor named here and think we have characterised your product wrongly, say so and we will correct it in the text and record the correction.</em></p>
+
+</article>
+<div class="cta">
+  <h2>Who made this</h2>
+  <p><a href="https://cairnvault.app">CairnVault</a> is an encrypted digital-legacy plan: your family can open it
+  when you die, and nobody — including us — can read it while you are alive. We hold one half of a
+  split key; a death certificate is reviewed by a human, and a 48-hour window lets a living planner
+  cancel a false claim. <strong>$79 one-time</strong> to build and seal a plan;
+  <strong>$29/year optional</strong> maintenance. Building a plan is free — you pay at seal.</p>
+  <p>See it work: <a href="https://youtu.be/aCSLWmU7Bb4" target="_blank" rel="noopener">4-minute product demo</a>
+  · <a href="https://youtu.be/AHOkf6vYjrE" target="_blank" rel="noopener">how the encryption works</a>
+  · <a href="https://cairnvault.app">cairnvault.app</a></p>
+  <p>We wrote the comparison above knowing it would be held to the same standard. If we have got
+  something wrong about our own product or anyone else's,
+  <a href="https://github.com/cairnvault/digital-legacy-teardown/issues/new">tell us</a>.</p>
+</div>
+<footer class="foot">
+  <p>Published by <a href="https://cairnvault.app">CairnVault</a> under
+     <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC&nbsp;BY&nbsp;4.0</a> —
+     republish it, quote it, correct it. Attribution and a link back are all we ask.</p>
+  <p>Source markdown, revision history and the correction log live on
+     <a href="https://github.com/cairnvault/digital-legacy-teardown">GitHub</a>.
+     Video explainer: <a href="https://youtu.be/AHOkf6vYjrE" target="_blank" rel="noopener">what happens to your online accounts when you die</a>.</p>
+  <p>Vendor terms change. Re-verify before relying on any of this. <strong>Not legal advice.</strong></p>
+</footer>
+</div>
+</body>
+</html>
