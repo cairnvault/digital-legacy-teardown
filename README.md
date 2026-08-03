@@ -6,13 +6,13 @@ Researched and published by [CairnVault](https://cairnvault.app). Every claim be
 
 *This is a comparison of how products work. It is not legal advice.*
 
-> 📖 **Prefer to read it as a web page?** [cairnvault.github.io/digital-legacy-teardown](https://cairnvault.github.io/digital-legacy-teardown/)
+> 📖 **Prefer to read it as a web page?** [cairnvault.github.io/digital-legacy-teardown](https://research.cairnvault.app/digital-legacy-teardown/)
 > · 🎬 **Prefer 4 minutes of video?** [What happens to your online accounts when you die](https://youtu.be/AHOkf6vYjrE)
 > · 📄 [Full source list](SOURCES.md) · 🔍 [Open verification questions](https://github.com/cairnvault/digital-legacy-teardown/issues) — help us close them
 >
 > ❓ **Just want your own question answered?** This document compares *products*. If you are here
 > because someone died, or because you are trying to work out what to set up, start with
-> [**15 questions about digital death, answered from primary sources**](https://cairnvault.github.io/digital-legacy-answers/)
+> [**15 questions about digital death, answered from primary sources**](https://research.cairnvault.app/digital-legacy-answers/)
 > — Google, Apple, Facebook, password managers, crypto, wills and RUFADAA, each answered on its own page.
 
 ---
