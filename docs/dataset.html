@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Digital legacy provider comparison — the open dataset (JSON + CSV)</title>
+<meta name="description" content="An open, sourced dataset of what 16 password managers, platform legacy-contact features and digital-legacy services actually do when a user dies. Scored on two questions: does it verify death, and can the provider read your data. JSON and CSV, CC BY 4.0.">
+<link rel="canonical" href="https://research.cairnvault.app/digital-legacy-teardown/dataset.html">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CairnVault Research">
+<meta property="og:title" content="Digital legacy provider comparison — the open dataset">
+<meta property="og:description" content="16 providers, scored on whether they verify death and whether they can read your data. Every field carries the source it was read from. JSON + CSV, CC BY 4.0.">
+<meta property="og:url" content="https://research.cairnvault.app/digital-legacy-teardown/dataset.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" type="application/json" href="https://research.cairnvault.app/digital-legacy-teardown/data/digital-legacy-comparison.json" title="Digital legacy provider comparison (JSON)">
+<link rel="alternate" type="text/csv" href="https://research.cairnvault.app/digital-legacy-teardown/data/digital-legacy-comparison.csv" title="Digital legacy provider comparison (CSV)">
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "Dataset",
+ "name": "Digital Legacy Provider Comparison",
+ "description": "A structured, primary-source comparison of what every major password manager, platform legacy-contact feature and dedicated digital-legacy service actually does when a user dies. Each record is scored on the only two questions that matter: does the provider verify that the user actually died, and can the provider read the user's data. Every field carries the source URL it was read from, and any field that could not be established from a primary source is recorded as \"unknown\" rather than guessed.",
+ "url": "https://research.cairnvault.app/digital-legacy-teardown/dataset.html",
+ "version": "1.0.0",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isAccessibleForFree": true,
+ "dateCreated": "2026-08-02",
+ "dateModified": "2026-08-08",
+ "creator": {
+  "@type": "Organization",
+  "name": "CairnVault Research",
+  "url": "https://cairnvault.app"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "CairnVault",
+  "url": "https://cairnvault.app"
+ },
+ "keywords": [
+  "digital legacy",
+  "digital estate planning",
+  "password manager",
+  "legacy contact",
+  "RUFADAA",
+  "inheritance",
+  "end-to-end encryption",
+  "death verification"
+ ],
+ "measurementTechnique": "Manual review of each vendor's own published documentation, fetched and quoted verbatim. Fields that could not be established from a primary source are recorded as \"unknown\" rather than inferred.",
+ "variableMeasured": [
+  {
+   "@type": "PropertyValue",
+   "name": "id",
+   "description": "Stable slug for the record."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "name",
+   "description": "The feature or product name as the vendor writes it."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "vendor",
+   "description": "The company that operates it."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "category",
+   "description": "platform_legacy_feature | password_manager | digital_legacy_service"
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "releaseTrigger",
+   "description": "What actually causes data to be released. One of: death_certificate_human_review, inactivity_timer, contact_initiated_silence_timer, legal_process_only, none."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "verifiesDeath",
+   "description": "yes = a death certificate or equivalent is required and reviewed. no = the trigger cannot distinguish death from any other silence. partial = required for some paths only. unknown = not established from a primary source."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "providerCanReadUserData",
+   "description": "yes = the provider holds the keys or can grant access to a third party, which is the same thing. scoped = the provider's inability-to-read claim covers only some fields. no = client-side encryption where the provider never receives the key. unknown = not established."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "passwordsIncluded",
+   "description": "Whether credentials/passwords are among the data a survivor actually receives. no = explicitly excluded by the vendor."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "delay",
+   "description": "Documented waiting period between the trigger firing and release."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "price",
+   "description": "As published by the vendor."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "sources",
+   "description": "URLs actually fetched and read. Not inferred, not remembered."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "verificationStatus",
+   "description": "verified = read verbatim from the vendor's own live page. partial = corroborated but not read verbatim from the primary source. unverified = could not be established."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "notes",
+   "description": "Anything that materially qualifies the row."
+  }
+ ],
+ "distribution": [
+  {
+   "@type": "DataDownload",
+   "encodingFormat": "application/json",
+   "contentUrl": "https://research.cairnvault.app/digital-legacy-teardown/data/digital-legacy-comparison.json"
+  },
+  {
+   "@type": "DataDownload",
+   "encodingFormat": "text/csv",
+   "contentUrl": "https://research.cairnvault.app/digital-legacy-teardown/data/digital-legacy-comparison.csv"
+  }
+ ]
+}</script>
+<style>:root{--ink:#1c1a19;--mute:#5d5753;--rule:#e2ddd8;--paper:#fbf9f7;--accent:#6b2434;--accentbg:#f6eeef}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font:17px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:44rem;margin:0 auto;padding:0 1.25rem 5rem}
+header.masthead{border-bottom:1px solid var(--rule);margin-bottom:2.5rem;padding:1.1rem 0}
+header.masthead .wrap{padding-bottom:0}
+.brand{font-weight:700;letter-spacing:.02em;color:var(--accent);text-decoration:none;font-size:1rem}
+.brand span{color:var(--mute);font-weight:400}
+nav.sub{font-size:.9rem;margin-top:.35rem}
+nav.sub a{color:var(--mute);margin-right:1rem}
+h1{font-size:2.05rem;line-height:1.2;letter-spacing:-.02em;margin:0 0 1rem}
+h2{font-size:1.4rem;line-height:1.25;margin:2.8rem 0 .9rem;padding-top:.4rem;border-top:1px solid var(--rule)}
+h3{font-size:1.12rem;margin:2rem 0 .6rem}
+h4{font-size:1rem;margin:1.4rem 0 .5rem}
+p,li{margin:0 0 1rem}
+ul,ol{padding-left:1.3rem}
+a{color:var(--accent)}
+a:hover{text-decoration:none}
+blockquote{margin:1.2rem 0;padding:.7rem 1.1rem;border-left:3px solid var(--accent);
+  background:var(--accentbg);color:#3d3532;border-radius:0 3px 3px 0}
+blockquote p:last-child{margin-bottom:0}
+hr{border:0;border-top:1px solid var(--rule);margin:2.5rem 0}
+code{background:#efeae5;padding:.1em .35em;border-radius:3px;font-size:.88em}
+.tablewrap{overflow-x:auto;margin:1.4rem 0;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:.92rem;min-width:30rem}
+th,td{border:1px solid var(--rule);padding:.5rem .65rem;text-align:left;vertical-align:top}
+th{background:#f2ede8;font-weight:600}
+.lede{font-size:1.12rem;color:var(--mute)}
+footer.foot{margin-top:3.5rem;padding-top:1.5rem;border-top:1px solid var(--rule);
+  font-size:.9rem;color:var(--mute)}
+footer.foot a{color:var(--accent)}
+.cta{display:block;margin:2.5rem 0;padding:1.1rem 1.25rem;background:#fff;
+  border:1px solid var(--rule);border-left:3px solid var(--accent);border-radius:0 4px 4px 0}
+.cta p:last-child{margin-bottom:0}
+.cta h2{border:0;margin:0 0 .5rem;padding:0;font-size:1.1rem}
+@media (max-width:600px){body{font-size:16px}h1{font-size:1.65rem}.wrap{padding:0 1rem 3.5rem}}</style>
+</head>
+<body>
+<header class="masthead"><div class="wrap">
+  <a class="brand" href="https://research.cairnvault.app/digital-legacy-teardown/">CairnVault <span>Research</span></a>
+  <nav class="sub"><a href="https://research.cairnvault.app/digital-legacy-teardown/">The teardown</a><a href="https://research.cairnvault.app/digital-legacy-teardown/sources.html">Sources</a><a href="https://research.cairnvault.app/digital-legacy-teardown/dataset.html">Dataset</a><a href="https://research.cairnvault.app/digital-legacy-answers/">Answers</a><a href="https://github.com/cairnvault/digital-legacy-teardown">GitHub</a><a href="https://cairnvault.app">CairnVault</a></nav>
+</div></header>
+<div class="wrap">
+<article>
+<h1>The digital legacy provider comparison, as an open dataset</h1>
+
+<p class="lede">16 providers — every major password manager, every big-platform
+legacy-contact feature, and the dedicated digital-legacy services — scored on the only two
+questions that decide whether any of this works. Machine-readable, CC&nbsp;BY&nbsp;4.0, and every
+field carries the URL it was read from.</p>
+
+<div class="cta">
+  <h2>Download</h2>
+  <p><a href="https://research.cairnvault.app/digital-legacy-teardown/data/digital-legacy-comparison.json"><strong>JSON</strong></a> — full records with notes, sources and field definitions.<br>
+     <a href="https://research.cairnvault.app/digital-legacy-teardown/data/digital-legacy-comparison.csv"><strong>CSV</strong></a> — flat table, one row per provider.</p>
+  <p>Version 1.0.0, last modified 2026-08-08. Reuse it under
+     <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC&nbsp;BY&nbsp;4.0</a>;
+     attribution and a link back are all we ask.</p>
+</div>
+
+<h2>The two questions</h2>
+
+<p><strong>Does the provider actually verify that you died</strong> — or does it just notice that
+you stopped logging in? And <strong>can the provider read your data?</strong> Almost every product
+in this category answers one of these well and the other badly.</p>
+
+<blockquote><p>Across every record below, verifying death and being unable to read the user&#x27;s data are mutually exclusive. No product occupies the cell where both are true. That is stated as a falsifiable claim, with the criteria for beating it fixed in advance, at https://github.com/cairnvault/digital-legacy-teardown/issues/8 — anyone may close it with evidence.</p></blockquote>
+
+<h2>The table</h2>
+
+<p>This is generated from the JSON file above, so it cannot drift from it.
+&ldquo;Unknown&rdquo; means we could not establish the field from a primary source and declined to
+guess — it is not a euphemism for &ldquo;no&rdquo;.</p>
+
+<div class="tablewrap">
+<table>
+<thead><tr>
+<th>Provider</th><th>Category</th><th>What triggers release</th>
+<th>Verifies death?</th><th>Provider can read your data?</th><th>Passwords included?</th><th>Status</th>
+</tr></thead>
+<tbody>
+<tr id="apple-legacy-contact"><td><strong>Legacy Contact (Digital Legacy)</strong><br><span style="color:var(--mute);font-size:.9em">Apple</span></td><td>Platform legacy feature</td><td>Death certificate, human review</td><td>Yes</td><td>Yes</td><td>No</td><td>verified <a href="https://support.apple.com/en-us/102631" rel="nofollow noopener" target="_blank">src</a></td></tr>
+<tr id="google-inactive-account-manager"><td><strong>Inactive Account Manager</strong><br><span style="color:var(--mute);font-size:.9em">Google</span></td><td>Platform legacy feature</td><td>Inactivity timer</td><td>No</td><td>Yes</td><td>Unknown</td><td>Partial <a href="https://support.google.com/accounts/answer/3036546" rel="nofollow noopener" target="_blank">src</a></td></tr>
+<tr id="meta-legacy-contact"><td><strong>Legacy Contact</strong><br><span style="color:var(--mute);font-size:.9em">Meta (Facebook)</span></td><td>Platform legacy feature</td><td>No release mechanism</td><td>Partial</td><td>Yes</td><td>No</td><td>verified <a href="https://www.facebook.com/help/1568013990080948" rel="nofollow noopener" target="_blank">src</a></td></tr>
+<tr id="microsoft-account"><td><strong>Deceased-user account access</strong><br><span style="color:var(--mute);font-size:.9em">Microsoft</span></td><td>Platform legacy feature</td><td>Legal process only</td><td>Yes</td><td>Yes</td><td>Unknown</td><td>Partial <a href="https://support.microsoft.com/en-us/account-billing/accessing-the-outlook-com-onedrive-and-other-microsoft-services-when-the-account-owner-has-died-ebbd2860-917e-4b39-9913-212362da6b2f" rel="nofollow noopener" target="_blank">src</a></td></tr>
+<tr id="bitwarden-emergency-access"><td><strong>Emergency Access</strong><br><span style="color:var(--mute);font-size:.9em">Bitwarden</span></td><td>Password manager</td><td>Contact-initiated silence timer</td><td>No</td><td>No</td><td>Yes</td><td>verified <a href="https://bitwarden.com/help/emergency-access/" rel="nofollow noopener" target="_blank">src</a></td></tr>
+<tr id="lastpass-emergency-access"><td><strong>Emergency Access</strong><br><span style="color:var(--mute);font-size:.9em">LastPass</span></td><td>Password manager</td><td>Contact-initiated silence timer</td><td>No</td><td>No</td><td>Yes</td><td>Partial <a href="https://support.lastpass.com/s/document-item?language=en_US&amp;bundleId=lastpass&amp;topicId=LastPass/c_emergency_access.html" rel="nofollow noopener" target="_blank">src</a></td></tr>
+<tr id="proton-pass-emergency-access"><td><strong>Emergency Access</strong><br><span style="color:var(--mute);font-size:.9em">Proton</span></td><td>Password manager</td><td>Contact-initiated silence timer</td><td>No</td><td>No</td><td>Yes</td><td>Partial <a href="https://proton.me/support/pass-emergency-access" rel="nofollow noopener" target="_blank">src</a></td></tr>
+<tr id="nordpass-emergency-access"><td><strong>Emergency Access</strong><br><span style="color:var(--mute);font-size:.9em">NordPass</span></td><td>Password manager</td><td>Contact-initiated silence timer</td><td>No</td><td>No</td><td>Yes</td><td>Partial <a href="https://nordpass.com/features/emergency-access/" rel="nofollow noopener" target="_blank">src</a></td></tr>
+<tr id="keeper-emergency-access"><td><strong>Emergency Access</strong><br><span style="color:var(--mute);font-size:.9em">Keeper Security</span></td><td>Password manager</td><td>Contact-initiated silence timer</td><td>No</td><td>No</td><td>Yes</td><td>Partial <a href="https://docs.keeper.io/en/user-guides/emergency-access" rel="nofollow noopener" target="_blank">src</a></td></tr>
+<tr id="1password"><td><strong>Emergency Kit (no emergency-access feature)</strong><br><span style="color:var(--mute);font-size:.9em">1Password</span></td><td>Password manager</td><td>No release mechanism</td><td>No</td><td>No</td><td>—</td><td>verified <a href="https://support.1password.com/emergency-kit/" rel="nofollow noopener" target="_blank">src</a></td></tr>
+<tr id="dashlane"><td><strong>Emergency contacts (discontinued)</strong><br><span style="color:var(--mute);font-size:.9em">Dashlane</span></td><td>Password manager</td><td>No release mechanism</td><td>No</td><td>No</td><td>—</td><td>Partial <a href="https://support.dashlane.com/hc/en-us/articles/202699101" rel="nofollow noopener" target="_blank">src</a></td></tr>
+<tr id="everplans"><td><strong>Everplans (Deputies)</strong><br><span style="color:var(--mute);font-size:.9em">Everplans (subsidiary of Precoa)</span></td><td>Digital-legacy service</td><td>Contact-initiated silence timer</td><td>No</td><td>Unknown</td><td>Yes</td><td>verified <a href="https://www.everplans.com/blog/keep-things-private-until-after-youre-gone" rel="nofollow noopener" target="_blank">src</a> <a href="https://www.everplans.com/everplans-security" rel="nofollow noopener" target="_blank">src</a></td></tr>
+<tr id="goodtrust"><td><strong>GoodTrust (dead man&#x27;s switch)</strong><br><span style="color:var(--mute);font-size:.9em">GoodTrust</span></td><td>Digital-legacy service</td><td>Inactivity timer</td><td>No</td><td>Yes</td><td>Yes</td><td>verified <a href="https://support.mygoodtrust.com/support/solutions/articles/66000503696-what-is-the-dead-man-switch-and-how-does-it-work-" rel="nofollow noopener" target="_blank">src</a> <a href="https://mygoodtrust.com/security" rel="nofollow noopener" target="_blank">src</a></td></tr>
+<tr id="trustworthy"><td><strong>Trustworthy (legacy access)</strong><br><span style="color:var(--mute);font-size:.9em">Trustworthy</span></td><td>Digital-legacy service</td><td>Death certificate, human review</td><td>Yes</td><td>Scoped</td><td>Yes</td><td>verified <a href="https://www.trustworthy.com/legacy-access-invitation" rel="nofollow noopener" target="_blank">src</a> <a href="https://www.trustworthy.com/faq" rel="nofollow noopener" target="_blank">src</a> <a href="https://www.trustworthy.com/blog/revolutionary-ai-features" rel="nofollow noopener" target="_blank">src</a></td></tr>
+<tr id="cipherwill"><td><strong>CipherWill</strong><br><span style="color:var(--mute);font-size:.9em">CipherWill</span></td><td>Digital-legacy service</td><td>Inactivity timer</td><td>No</td><td>No</td><td>Yes</td><td>verified <a href="https://www.cipherwill.com/i/how-execution-timeline-works" rel="nofollow noopener" target="_blank">src</a></td></tr>
+<tr id="cairnvault"><td><strong>CairnVault</strong><br><span style="color:var(--mute);font-size:.9em">CairnVault</span></td><td>Digital-legacy service</td><td>Death certificate, human review</td><td>Yes</td><td>No</td><td>Yes</td><td>Self-reported <a href="https://cairnvault.app" rel="nofollow noopener" target="_blank">src</a></td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>How to read &ldquo;provider can read your data&rdquo;</h2>
+
+<p>The answer is <em>yes</em> whenever the provider holds the keys, and also whenever the provider
+can grant a third party access — because access a company is able to grant is access that company
+has. It is <em>scoped</em> where a vendor's inability-to-read claim is real but covers only some
+fields. It is <em>no</em> only where encryption happens on the user's device and the provider never
+receives the key.</p>
+
+<h2>Method, and the conflict of interest</h2>
+
+<p>CairnVault sells a commercial product in this category and is therefore not a neutral party. That is why every field is sourced to the vendor&#x27;s own page rather than to us, why the last record in this file is our own product held to the same schema, and why unverified fields are marked &quot;unknown&quot; instead of filled in. Check the sources.</p>
+
+<p>Every claim was read from the vendor's own live documentation and quoted verbatim where the
+wording carries the weight. Roughly a third of the competitive claims we started with did not
+survive that check and were retracted — including three that were in our own marketing. The
+<a href="https://github.com/cairnvault/digital-legacy-teardown#corrections">dated correction log</a>
+and the <a href="https://github.com/cairnvault/digital-legacy-teardown/issues">open verification
+questions</a> are both public.</p>
+
+<p><strong>Nothing in this dataset is legal advice. Statutory interaction (RUFADAA and its state enactments) varies by jurisdiction.</strong> Vendor terms change; re-verify before relying on any
+of this. If a row is wrong, <a href="https://github.com/cairnvault/digital-legacy-teardown/issues/new">open
+an issue</a> — corrections are published with dates, including corrections against us.</p>
+
+</article>
+
+<footer class="foot">
+  <p>Published by <a href="https://cairnvault.app">CairnVault</a> under
+     <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC&nbsp;BY&nbsp;4.0</a> —
+     republish it, quote it, correct it. Attribution and a link back are all we ask.</p>
+  <p>The narrative version is <a href="https://research.cairnvault.app/digital-legacy-teardown/">the teardown</a>; every source is listed on the
+     <a href="https://research.cairnvault.app/digital-legacy-teardown/sources.html">sources page</a>; plain answers to specific questions are in the
+     <a href="https://research.cairnvault.app/digital-legacy-answers/">answer library</a>.</p>
+  <p>Vendor terms change. Re-verify before relying on any of this. <strong>Not legal advice.</strong></p>
+</footer>
+</div>
+</body>
+</html>
