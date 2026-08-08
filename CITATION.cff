@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+title: "Digital Legacy Provider Comparison"
+message: "If you use this dataset or quote the teardown, please cite it as below."
+type: dataset
+abstract: >-
+  A structured, primary-source comparison of what every major password manager,
+  platform legacy-contact feature and dedicated digital-legacy service actually
+  does when a user dies. Each of the sixteen records is scored on two questions:
+  does the provider verify that the user actually died, and can the provider read
+  the user's data. Every field carries the source URL it was read from, and any
+  field that could not be established from a primary source is recorded as
+  "unknown" rather than guessed. The dataset's central finding is that verifying
+  death and being unable to read the user's data are, across every record,
+  mutually exclusive.
+authors:
+  - name: "CairnVault Research"
+    website: "https://research.cairnvault.app/"
+version: "1.0.0"
+date-released: "2026-08-08"
+license: CC-BY-4.0
+url: "https://research.cairnvault.app/digital-legacy-teardown/"
+repository-code: "https://github.com/cairnvault/digital-legacy-teardown"
+keywords:
+  - digital legacy
+  - digital estate planning
+  - password managers
+  - end-of-life planning
+  - death verification
+  - end-to-end encryption
+  - RUFADAA
