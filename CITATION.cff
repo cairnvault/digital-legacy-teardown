@@ -18,6 +18,11 @@ authors:
 version: "1.0.0"
 date-released: "2026-08-08"
 license: CC-BY-4.0
+doi: "10.5281/zenodo.21894423"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.21894423"
+    description: "Concept DOI for the archived dataset on Zenodo (CERN)"
 url: "https://research.cairnvault.app/digital-legacy-teardown/"
 repository-code: "https://github.com/cairnvault/digital-legacy-teardown"
 keywords:

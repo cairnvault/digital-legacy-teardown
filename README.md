@@ -6,6 +6,11 @@ Researched and published by [CairnVault](https://cairnvault.app). Every claim be
 
 *This is a comparison of how products work. It is not legal advice.*
 
+> 🎓 **Citing this?** The dataset is archived on Zenodo (CERN) with a permanent DOI:
+> [**10.5281/zenodo.21894423**](https://doi.org/10.5281/zenodo.21894423). The DOI resolves even if
+> this repository or site moves. Full citation formats are on the
+> [dataset page](https://research.cairnvault.app/digital-legacy-teardown/dataset.html#cite).
+>
 > 📖 **Prefer to read it as a web page?** [research.cairnvault.app/digital-legacy-teardown](https://research.cairnvault.app/digital-legacy-teardown/)
 > · 📊 **Prefer it as data?** [The open dataset](https://research.cairnvault.app/digital-legacy-teardown/dataset.html) — all 16 providers as [JSON](https://research.cairnvault.app/digital-legacy-teardown/data/digital-legacy-comparison.json) or [CSV](https://research.cairnvault.app/digital-legacy-teardown/data/digital-legacy-comparison.csv), CC BY 4.0, every field carrying the source URL it was read from
 > · 🎬 **Prefer 4 minutes of video?** [What happens to your online accounts when you die](https://youtu.be/AHOkf6vYjrE)

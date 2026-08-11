@@ -55,10 +55,16 @@ for r in d['records']:
         f'<td>{cell(r["verificationStatus"])} {src}</td>'
         f'</tr>')
 
+DOI = '10.5281/zenodo.21894423'
+DOI_URL = f'https://doi.org/{DOI}'
+ZENODO_URL = 'https://zenodo.org/records/21894423'
+
 schema = {
   "@context":"https://schema.org","@type":"Dataset",
   "name": d['name'], "description": d['description'],
   "url": d['url'], "version": d['version'],
+  "identifier": DOI_URL,
+  "sameAs": ZENODO_URL,
   "license":"https://creativecommons.org/licenses/by/4.0/",
   "isAccessibleForFree": True,
   "dateCreated": d['dateCreated'], "dateModified": d['dateModified'],
@@ -179,6 +185,26 @@ an issue</a> — corrections are published with dates, including corrections aga
      <a href="https://research.cairnvault.app/digital-legacy-answers/">answer library</a>.</p>
   <p>Vendor terms change. Re-verify before relying on any of this. <strong>Not legal advice.</strong></p>
 </footer>
+
+<h2 id="cite">How to cite this dataset</h2>
+<p>This dataset is archived on Zenodo, operated by CERN, and has a permanent DOI. The DOI resolves
+   for good even if this site moves or disappears — which is the point of depositing it.</p>
+<p><strong>DOI:</strong> <a href="{DOI_URL}" target="_blank" rel="noopener">{DOI}</a>
+   · <strong>Zenodo record:</strong> <a href="{ZENODO_URL}" target="_blank" rel="noopener">zenodo.org/records/21894423</a></p>
+<pre style="white-space:pre-wrap"><code>CairnVault Research (2026). Digital Legacy Provider Comparison (Version 1.0.0)
+[Data set]. Zenodo. https://doi.org/{DOI}</code></pre>
+<p>BibTeX:</p>
+<pre style="white-space:pre-wrap"><code>@dataset{{cairnvault_2026_digital_legacy,
+  author    = {{{{CairnVault Research}}}},
+  title     = {{Digital Legacy Provider Comparison}},
+  year      = {{2026}},
+  version   = {{1.0.0}},
+  publisher = {{Zenodo}},
+  doi       = {{{DOI}}},
+  url       = {{{DOI_URL}}}
+}}</code></pre>
+<p>Licensed <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC&nbsp;BY&nbsp;4.0</a>.
+   You may republish, quote or correct it; attribution and a link back are all we ask.</p>
 </div>
 </body>
 </html>
