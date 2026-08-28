@@ -121,7 +121,39 @@ So the honest version of the criticism is this:
 
 **1. Every single one of them is a silence timer.** Not one of the seven performs any death or incapacity verification. The mechanism is universally: your contact requests access → you have a window to refuse → if you do not respond, access opens. That is a design that cannot distinguish a funeral from a two-week holiday with no signal. If you are in an ICU, unconscious, your emergency contact can request your vault and the clock will run out on you.
 
-**2. The survivor still has to set up an account with your vendor, correctly, while grieving.** Free, yes. But a bereaved 68-year-old has to discover which password manager their spouse used, create an account on it, and complete a request flow. That is a real barrier at the worst possible moment, even at $0.
+**2. The survivor has to complete a request flow, and then wait, while grieving.**
+
+> **Corrected 2026-08-28 — we had this wrong, and a Bitwarden community member was right to
+> say so.** This point previously read: *"The survivor still has to set up an account with your
+> vendor, correctly, while grieving. But a bereaved 68-year-old has to discover which password
+> manager their spouse used, create an account on it, and complete a request flow."* That is
+> **inaccurate for every product in this table that uses a designated-in-advance grantee.** As
+> `grb` pointed out [in the Bitwarden community forum](https://community.bitwarden.com/t/emergency-access-only-upon-death-feature-digital-legacy/31706/31),
+> the emergency contact creates their account **at the time the grantor sets emergency access
+> up, while the grantor is alive**. So by the time anyone has died, the survivor already knows
+> which password manager was used and already has an account on it. The account-creation and
+> vendor-discovery burden we described is paid in advance, not at the graveside. We have left
+> the original wording quoted here rather than deleting it.
+
+What survives the correction is narrower, and we would rather state the narrow true version
+than the wide false one:
+
+- The survivor must **remember, possibly years later, that they were designated at all** — and
+  must still find their way into the right flow at the worst possible time.
+- They must submit the request and then **wait out the grantor's chosen timer** — commonly
+  days, and up to 90 days at some vendors — before anything opens. During that window the
+  estate is running.
+- It only works for the people the grantor thought to designate *before* they died. There is no
+  path at all for anyone else.
+
+And in fairness to the counter-argument, `grb` also made a point we accept: submitting an
+emergency-access request is **less onerous for the survivor** than obtaining and submitting a
+death certificate, which is what a verified-death product like ours requires. That is a real
+trade, and it runs against us. A silence timer is easier on the survivor and cannot tell a
+funeral from an ICU stay; a verified-death release is harder on the survivor and cannot open
+while you are alive and well. Which of those you want is a judgement about which failure you
+would rather have, not a question with one right answer — and we would rather you make that
+judgement with the trade stated plainly than sell you past it.
 
 **3. What is released is a raw vault dump.** Several hundred credentials in a list, with no indication of which three actually matter, which subscriptions are still charging the estate, or what to do first. It is data, not instructions.
 
@@ -268,7 +300,7 @@ Everything above was checked against the vendor's live documentation on **2 Augu
 - Any verbatim quotation from CipherWill's FAQ on death verification — that page renders via JavaScript and we could not retrieve it.
 - A precise current funding total for GoodTrust; published sources conflict.
 
-**Claims we retracted from our own earlier materials** are marked in the text above: the password-manager "must be a paying subscriber" claim, the Facebook account-deletion claim, and Trustworthy's Series A size.
+**Claims we retracted or corrected in our own earlier materials** are marked in the text above: the password-manager "must be a paying subscriber" claim, the Facebook account-deletion claim, Trustworthy's Series A size, and — corrected 2026-08-28 after a reader challenged it — the claim that a survivor has to discover the vendor and create an account "while grieving".
 
 *Vendor terms change. Re-verify before relying on any of this. Not legal advice.*
 
@@ -303,6 +335,7 @@ publishing it, and we would genuinely like help closing them:
 | 2026-08-02 | Softened: Everplans' encryption description, from *"admits server-side AES-256 with company-held keys"* to a description of what their security page actually says. | Their page is *silent* on zero-knowledge; it makes a policy promise with a stated staff-access carve-out. Overstating it would have been the same error we criticise others for. |
 | 2026-08-02 | Removed: Apple's *"3-year deletion"* policy and *"a court order is insufficient."* | Could not be confirmed from Apple's own documentation, and the second appears to be wrong. |
 | 2026-08-03 | Added this correction log, and filed the unresolved claims as public issues. | The list of what we could not verify was buried at the bottom of the document; it should be actionable. |
+| 2026-08-28 | Corrected criticism **#2**, from *"the survivor still has to set up an account with your vendor, correctly, while grieving"* to a narrower claim about the request flow and the waiting period. | Raised by **`grb`** [in the Bitwarden community forum](https://community.bitwarden.com/t/emergency-access-only-upon-death-feature-digital-legacy/31706/31), and they were right. A Bitwarden emergency-access grantee creates their account when the grantor *sets the feature up* — while the grantor is alive. The discovery-and-signup burden we described is therefore paid in advance, not at the graveside. The same applies to every designated-in-advance grantee in this table. We also now state, in the text, the counter-point `grb` made against us: filing an emergency-access request is genuinely *less* onerous for a survivor than obtaining a death certificate. |
 
 ---
 

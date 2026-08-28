@@ -101,6 +101,8 @@ page = f'''<!doctype html>
 <link rel="alternate" type="text/csv" href="{BASE}/data/digital-legacy-comparison.csv" title="Digital legacy provider comparison (CSV)">
 <script type="application/ld+json">{json.dumps(schema, indent=1)}</script>
 {STYLE}
+<script>window.goatcounter={{path:function(p){{return 'research'+p}}}}</script>
+<script data-goatcounter="https://cairnvault.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </head>
 <body>
 <header class="masthead"><div class="wrap">
